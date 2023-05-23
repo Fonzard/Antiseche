@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+		<meta charset="utf-8">
+        <link rel="stylesheet" href=".././css /normalize.css">
+        <link rel="stylesheet" href=".././css /flexbox.css"/>
+        <link rel="stylesheet" href=".././css /theme.css">
+    </head>
+    <body>
+        <title>Flexbox</title>
+<header class="header">
+    <h1>Flexbox</h1>
+</header>
+        <button onclick="myFunction()">Dark Mode</button> 
+        <script> // Dark Mode à retravailler
+            function myFunction() 
+        {   
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+        </script>
+    <main>
+        <!--Menu nav -->
+        <form class="menubtn">
+            <label class="menuclick" for="menu-toggle">Tu veux aller où bg ?</label>
+            <input type="checkbox" id="menu-toggle">
+        <ul id="menu">
+            <li><a href="#découverte">Découverte</a></li>
+            <li><a href="#position">Position</a></li>
+            <li><a href="#color">Color</a></li>
+            <li><a href="#mediasqueries">Media Queries</a></li>
+        </ul>
+    </form>  
+    <section>
+    <header>
+            <h2 id="découverte">1. Découverte Flexbox</h2>    
+    </header>
+    <article class="container-1"> 
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+        <div class="box box-4">Box 4</div>
+    </article>
+    <footer>
+        <pre>box 1 <code>{ order: 4; flex-grow: 1;} </code> box 2 <code>{flex-grow:1;}</code> box 3 <code>{flex-shrink:1;}</code> box 4 <code>{flex-basis:200px;}</code></pre>
+        <p>La box 4 avec la balise <code>flex-basis</code> établit une valeur de base au box,qui peuvent donc varier soit en agrandissant avec <code>flex-grow</code> ou en diminuant avec <code>flex-shrink</code></p>
+    </footer>
+    </section>
+    
+    <section>
+        <header>
+            <h2 id="position">2. Position</h2>
+        </header>
+        <article class="container-2">
+        <div class="box bx-1">Bx 1</div>
+        <div class="box bx-2">Bx 2</div>
+        <div class="box bx-3">Bx 3</div>
+        <div class="box bx-4">Bx 4</div>
+        <div class="box bx-5">Bx 5</div>
+        <div class="box bx-6">Bx 6</div>
+        <div class="box bx-7">Bx 7</div>
+        <div class="box bx-8">Bx 8</div>
+        <div class="box bx-9">Bx 9</div>
+        <div class="box bx-10">Bx 10</div>
+        <div class="box bx-11">Bx 11</div>
+        <div class="box bx-12">Bx 12</div>
+        </article>
+        <footer class="foot">
+    <pre> box 1 <code>{ order:4; flex-grow: 1;} </code> box 2 <code>{order: 5;flex-grow:1;}</code> box 3 <code>{order:3; align-self:flex-start; flex-grow:1;}</code> box 4 <code>{order:6; flex-grow:1;}</code> box 6 <code>{order:7; flex-grow:1;}</code>  box 7 <code>{order:2; flex-grow:1;}</code> box 7 <code>{order:2; flex-grow:1;}</code> box 8 <code>{order:8; align-self:flex-end; flex-grow:1;}</code> box 9 <code>{order:11; flex-grow:1;}</code> box 10 <code>{order:10; flex-grow:1;}</code> box 11 <code>{order:9; align-self:flex-start; flex-grow:1;}</code> box 12 <code>{order:12; flex-grow:1;}</code></pre>
+    <p>Chaque box va se placer sur la postion que l'on souhaite en leur attribuant un ordre grâce à la balise <code>order</code>.</p> 
+    <p>La propriétés <code>align-self</code> permet d'aligner les objets flexibles d'un ligne flexible, notamment avec les <code>flex-start</code> / <code>flex-end</code> qui vont positionner l'item par rapport à leur début ou leur fin. </p>
+        </footer>
+    </section>
+    <h2 id="color">3. Flexbox Color</h2>
+        <h3>3.1 occuper tout le viewport avec les boîtes basculées à la verticale.</h3> 
+    <section>
+    <article class="container-3">
+        <div class="box vertical"><span>1</span></div>
+        <div class="box vertical"><span>2</span></div>
+        <div class="box vertical"><span>3</span></div>
+        <div class="box vertical"><span>4</span></div>
+        <div class="box vertical"><span>5</span></div>
+        <div class="box vertical"><span>6</span></div>
+        <div class="box vertical"><span>7</span></div>
+        <div class="box vertical"><span>8</span></div>
+    </article>
+    <footer class="foot">
+        <pre>container-3 <code>{ display:flex; flex-wrap:wrap; flex-direction:row; align-items:stretch; justify-content:start;}</code></pre>
+        <p>C'est en influenceant le parent avec différentes propriétées de flex, que l'on peut organiser les balises à la vertical et s'étalant grâce à <code>align-item:stretch;</code> sur toutes la longueur du viewport.</p>
+        <p><strong>Petit plus :s</strong> Découverte du selecteur <code>:nth-of-type{n}</code>. Permet de selectionner chaque élément qui est le énième enfant de son parent (<code>n</code> représente un nbre).</p>
+    </footer>
+    </section> 
+        <h3>3.2 autoriser le retour à la ligne, et placer 4 items par ligne en déterminant leur largeur (2 propriétés possibles).</h3>
+        <section>
+        <article class="container-3">
+            <div class="box wrap"><span>1</span></div>
+            <div class="box wrap"><span>2</span></div>
+            <div class="box wrap"><span>3</span></div>
+            <div class="box wrap"><span>4</span></div>
+            <div class="box wrap"><span>5</span></div>
+            <div class="box wrap"><span>6</span></div>
+            <div class="box wrap"><span>7</span></div>
+            <div class="box wrap"><span>8</span></div>
+        </article>
+        <footer>
+        <pre>
+container-3 <code>{flex-wrap:wrap}</code>
+container-3 > .wrap <code>{width:200px;}</code></pre>
+            <p>Dans la continuité de l'exercice précédent, on va seulement modifier la largeur de chaque box, pour quelles remplissent la largeur max du container et quelles soient forcé à s'aligner en dessous. Grâce à <code>wrap</code>.</p>
+        </footer>
+        </section>
+        <h3>3.3 Appliquer des marges aux boîtes, puis centrer le contenu. Ajouter de nouvelles boîtes et observer le comportement d'affichage.</h3>
+        <section>
+        <article class="container-4">
+            <div class="box b-1"><span>1</span></div>
+            <div class="box b-2"><span>2</span></div>
+            <div class="box b-3"><span>3</span></div>
+            <div class="box b-4"><span>4</span></div>
+            <div class="box b-5"><span>5</span></div>
+            <div class="box b-6"><span>6</span></div>
+            <div class="box b-7"><span>7</span></div>
+            <div class="box b-8"><span>8</span></div>
+        </article>
+        <footer class="foot">
+            <pre>container-4 <code>{border: 4px solid rgb(152, 83, 10);</code> <code>gap:5px;</code></pre>
+            <p>Il faut simplement utiliser la propriétés <code>gap</code> sur le parent, ce qui créer des espaces entre chaque enfant. Pour centrer les numéros des box, il leur attribuer la propriétés <code>justify-content:center</code> </p>
+        </footer>
+        </section> 
+        <h2 id="mediasqueries">4.Modifier la composition par les médias queries</h2>
+        <h3>4.1 modifier la composition 3.3 pour étendre la boîte 5 à toute la largeur.</h3>
+        <section class="container-5">
+            <div class="box b-1"><span>1</span></div>
+            <div class="box b-2"><span>2</span></div>
+            <div class="box b-3"><span>3</span></div>
+            <div class="box b-4"><span>4</span></div>
+            <div class="box b-5"><span>5</span></div>
+            <div class="box b-6"><span>6</span></div>
+            <div class="box b-7"><span>7</span></div>
+            <div class="box b-8"><span>8</span></div>
+            <div class="box b-9"><span>9</span></div>
+        </section> 
+        </main>
+    </body> 
+</html>

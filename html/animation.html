@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Animation</title>
+        <link rel="stylesheet" href=".././css /normalize.css">
+        <link rel="stylesheet" href=".././css /theme.css" />
+        <link rel="stylesheet" href=".././css /animation.css">
+    </head>
+    <body>
+        <title>Animation</title>
+        <header class="header">
+            <h1>Animation</h1>
+        </header>
+        <main class="container">
+            <section class="termes_animation">
+                <h2>Dis les termes</h2>
+                <article class="keyframes"> <!--Aligner les articles "termes" sur une ligne-->
+                    <h3>@keyframes</h3>
+                    <p>La règle @keyframes permets de définir les étapes qui compose la séquence d'une animation CSS</p>
+                </article>
+                <article class="transform">
+                    <h3>Transform</h3>
+                    <p>Transform nous permet d'assigner une ou plusieurs effets de transformation à appliquer à un élément : <code>rotate</code> / <code>translate</code> / <code>scale</code> / <code>skew</code> / <code>matrix</code>  </p>
+                </article>
+                <article class="animation">
+                    <h3>Animation</h3>
+                    <p>Les animations vont permettre de gérer le comportement des animations CSS en définissant la durée, le nbre de répétition, le comportement de répétition.</p>
+                    <p>Pour définir une animation sur css, il faut utiliser les propriétés de type <code>animation-</code> <code>name</code> / <code>duration</code>  / <code>timing-function</code> / <code>delay</code> / <code>iteration-count</code> / <code>direction</code> / <code>fill-mode</code> / <code>play-state</code>. on peut aussi utiliser le raccourci <code>animation</code></p>
+                </article>
+            </section>
+            <section class="ex">
+        <article id="opacity">
+            <h2>Opacity 0 to 1</h2>
+            <div>
+
+            </div>
+            <footer>
+                <pre>@keyframes colorChange{   
+                    0% {               
+                    opacity:0;         
+                    }                  
+                    100% {             
+                    opacity:1;        
+                        }
+
+#opacity div {
+            animation-name:colorChange;
+            animation-duration:3s;
+            animation-delay:2s;
+            animation-fill-mode:forwards;
+            }
+                </pre>   
+            </footer>
+        </article>
+        <article id="transform-translate">
+            <h2> Transform:translate</h2>
+            <div>
+
+            </div>
+            <footer>
+            <pre>@keyframes moveRight{                  
+                0% {                                
+                    transform:translateX(0);        
+                }                                   
+                100% {                              
+                    transform:translateX(15vh);   
+                }
+
+#transform-translate div {
+                    animation-name:moveRight;
+                    animation-duration:3s;
+                    animation-delay:2s;
+                    animation-fill-mode:forwards;
+                }
+                    </pre>
+            </footer>    
+        </article>
+        <article id="translate-rotate">
+            <h2>Translate / rotate</h2>
+            <div>
+
+            </div>
+            <footer>
+                <pre>@keyframes rolledRight{
+                    0% {
+                        transform:translateX(0) rotate(0deg);
+                    }
+                    100% {
+                        transform:translateX(15vh) rotate(180deg) ;
+                    }
+
+#translate-rotate div {
+                        animation-name:rolledRight;
+                        animation-duration:3s;
+                        animation-delay:2s;
+                        animation-fill-mode:forwards;
+                    }
+                </pre>
+            </footer>
+        </article>
+        <article id="bounce">
+            <h2>Bounce</h2>
+            <div>
+
+            </div>
+            <footer>
+                
+
+            </footer>
+        </article>
+    </section>
+    </main>
+    </body>
+</html>

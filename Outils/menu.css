@@ -1,0 +1,45 @@
+/* Style */
+#menu > li > a {
+    text-decoration: none;
+    color:#326e43;
+}
+.menubtn {
+    display:inline-block;
+}
+#menu {
+    
+    overflow:hidden;
+    max-height:0;
+    width:88%;
+    margin:0;
+    -webkit-transition: all 0.3s ease;
+    text-align:start;
+    list-style: none;
+    background-color:#efece5;
+    border: 1px solid #E15443; 
+}
+.menuclick {
+    width:100%;
+    display:inline-block;
+    font-weight:bold;
+    text-align:center;
+    cursor:pointer;
+    background-color: #efece5;
+    border:10px solid #E15443;
+}
+.menuclick:hover {
+    opacity:80%;
+}
+/* Montrer cacher */ 
+#menu-toggle:checked + #menu {
+    max-height: 10em;
+}
+.menubtn {
+    position:fixed;
+    right:5%;
+    bottom:65%;
+}
+input[type="checkbox"]#menu-toggle {
+    display:none;   
+}
+

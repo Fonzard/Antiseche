@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <link rel="stylesheet" href=".././css /normalize.css">
+    <link rel="stylesheet" href=".././css /theme.css">
+    <link rel="stylesheet" href=".././css /position.css" type="text/css" />
+</head>
+<body>
+    <div class="hiddenMenu" aria-label="menu" role="navigation">
+        <a href="#static" tabindex="0"></a>
+        <a href="#relative" tabindex="0"></a>
+        <a href="#absolute" tabindex="0"></a>
+    </div>
+    <header class="header">
+        <h1>Position</h1>
+    </header>
+    <button onclick="myFunction()">Dark Mode</button> 
+    <script> // Dark Mode
+        function myFunction() 
+    {   
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+    </script>
+    <main>
+        <form class="menubtn">
+            <label class="menuclick" for="menu-toggle">Tu veux aller où bg ?</label>
+            <input type="checkbox" id="menu-toggle">
+        <ul id="menu">
+            <li><a href="#static">Static</a></li>
+            <li><a href="#relative">Relative</a></li>
+            <li><a href="#absolute">Absolute</a></li>
+        </ul>
+    </form>
+        <section class="container">
+            <article class="sticky">
+                <h2>La position: sticky</h2>
+                <pre>.sticky <code>{ position:sticky; top:0;}</code></pre>
+                <p>L'élément se place normalement dans le flux, puis il suit le défilement en fonction de son parent et selon les proprietés <code>top</code> <code>right</code> <code>left</code> <code>bottom</code>. </p>
+            </article>
+            <article id="static">
+                <h2>Un article sans position définie</h2>
+                <p>Aut doloribus officia a est incidunt veritatis ullam hic aperiam? Eum, officiis corporis explicabo nihil sit eaque quis voluptate nam!</p>
+                <p>Aspernatur, ducimus, consectetur dignissimos reiciendis repellendus aut sequi voluptatem nesciunt praesentium ullam quae possimus voluptas labore atque adipisci voluptatum asperiores.</p>
+            </article>
+            <article class="static">
+                <h2>La position: static</h2>
+                <pre>.static <code>{position:static}</code></pre>
+                <p>C'est le comportement par défault, l'item se positionne dans le flux. <br> Les propriétés <code>top</code> <code>right</code> <code>left</code> <code>bottom</code> ne s'applique pas à cette propriétées mais à toutes celles qui suivent. </p>
+            </article>
+            <article>
+                <h2>Un article sans position définie</h2>
+                <p>Quaerat, nulla voluptates cumque iure explicabo voluptatum vel harum sed necessitatibus maxime ab laborum rerum omnis quam nemo iusto tempora.</p>
+                <p>Modi, dolorem, quos, temporibus quasi perspiciatis error vitae amet nostrum iste delectus iure nihil a illum illo suscipit quibusdam ea.</p>
+            </article>
+            <article id="relative" class="relative left">
+                <h2>La position: relative</h2>
+                <pre>.relative <code>{position:relative;}</code> .left <code>{right:5em;}</code></pre>
+                <p>L'élément se positionne normalement dans le flux, et peut se déplacer par rapport à lui même avec les propriétés <code>top</code> <code>right</code> <code>left</code> <code>bottom</code>. Le décalage n'a pas d'impact sur les autres. </p>
+            </article>
+            <article>
+                <h2>Un article sans position définie</h2>
+                <p>Dolorem, illum, molestiae enim ex dignissimos officiis quo eaque in exercitationem aliquid! Impedit, laboriosam molestias eaque corporis excepturi ad atque.</p>
+                <p>Nostrum, inventore, nihil dicta quaerat officia qui quisquam veniam rem architecto ipsam id sapiente repellat totam dolore aspernatur. Sunt, nulla!</p>
+            </article>
+            <article id="absolute" class="absolute-relative parent">
+                <div class="absolute">position absolute</div>
+                <h2>La position: relative et un sous élément en position: absolute</h2>
+                <pre>.absolute-relative <code>{position:relative;}</code> .absolute <code>{position:absolute; top:0; right:0;}</code></pre>
+                <p>L'élément est retiré du flux normal. Il se positionne par rapport à son parent le plus proche, qui doit disposer de la propriété relative, si il n'y en a pas il se déplacera en fonction des propriétés <code>top</code> <code>right</code> <code>left</code> <code>bottom</code>. </p>
+            </article>
+            <article class="fixed">
+                <h2>La position: fixed</h2>
+                <pre>.fixed <code>{position:fixed}</code></pre>
+                <p>L'élément est retiré du flux normal, pour venir se fixer sur le bloc englobant. Ce qui amène l'élément à suivre le défilement de la page, sauf si il est relié à un parent qui joue le rôle de bloc englobant. La position finale de l'élément est determinée par les propriétés <code>top</code> <code>right</code> <code>left</code> <code>bottom</code>. </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

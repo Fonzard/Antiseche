@@ -1,0 +1,163 @@
+/* *****************************************************************
+TOOLS
+***************************************************************** */
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background-color:var(--main-bg-color);
+    font-size:16px;
+}
+/* *****************************************************************
+VARIABLE
+***************************************************************** */
+:root {
+    --font-beckman: "Beckman", "sans-serif";
+    --primary-color:#326e43;
+    --secondary-color:#555556;
+    --main-bg-color:#efece5;
+}
+
+/* *****************************************************************
+GENERALITIES
+***************************************************************** */
+
+.header {
+    background-color: #326e43;
+}
+h1 {
+    margin-left: 10px;
+    margin-bottom:20px;
+    color:#efece5;
+}
+h2 {
+    padding:1em;
+    color: var(--primary-color);
+}
+h3 {
+    margin-left: 30px;
+    color: var(--primary-color);
+    font-weight: normal;
+    padding:1em;
+}
+a {
+    text-decoration:none;
+}
+
+/* *****************************************************************
+MAIN LAYOUT
+***************************************************************** */
+.container {
+	margin:auto;
+	padding:auto;
+    text-align:left;
+}
+article {
+    padding:1em;
+}
+.parent {
+	border: 1px dashed #DD5735;
+}
+/* *****************************************************************
+VARIOUS
+***************************************************************** */
+/* explication */
+pre {
+    width:61%;
+    padding:1em;
+    margin-left:5vw;
+    margin-bottom:1em;
+    color:var(--primary-color);
+    background-color:white;
+    border:1px solid #326e43;
+    overflow: auto;
+}
+code {
+    color:var(--main-bg-color);
+    background-color: rgba(85, 85, 86, 0.4);
+    border-radius:3px;
+} /* Possibilités de détailler les codes, genre du vert pour les class, du jaune pour les propriétées et <> */
+p {
+    color:var(--secondary-color);
+    padding: 1em;
+}
+.card,
+.cards > * {
+	padding: 2em;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+/* *****************************************************************
+FONT
+***************************************************************** */
+@font-face {
+    font-family:"Beckman";   
+    src: url(../font/beckman/Beckman.otf) format("opentype");
+    font-weight:normal;
+    font-style:normal;
+}
+/* *****************************************************************
+ACCESSIBILITY
+***************************************************************** */
+.hiddenMenu {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:absolute;
+    top:-150vw;
+    left:0;
+}
+/* *****************************************************************
+Menu nav
+***************************************************************** */
+/* Style */
+#menu > li > a {
+    text-decoration: none;
+    color:#326e43;
+}
+.menubtn {
+    display:inline-block;
+}
+#menu {
+    
+    overflow:hidden;
+    max-height:0;
+    width:100%;
+    margin:0;
+    -webkit-transition: all 0.3s ease;
+    text-align:start;
+    list-style: none;
+    background-color:#efece5;
+    border: 1px solid #E15443; 
+}
+.menuclick {
+    width:100%;
+    display:inline-block;
+    font-weight:bold;
+    text-align:center;
+    cursor:pointer;
+    background-color: #efece5;
+    border:10px solid #E15443;
+}
+.menuclick:hover {
+    opacity:80%;
+}
+/* Montrer cacher */ 
+#menu-toggle:checked + #menu {
+    max-height: 10em;
+}
+.menubtn {
+    position:fixed;
+    right:5%;
+    bottom:65%;
+}
+input[type="checkbox"]#menu-toggle {
+    display:none;   
+}
+
+

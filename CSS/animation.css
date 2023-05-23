@@ -1,0 +1,126 @@
+/* Généralités */
+.ex {
+    width:100vw;
+    height:100vh;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+h1 {
+    grid-column: 1 / 3;
+}
+
+article {
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+    padding:5px;    
+}
+
+article h2 {
+    text-align: center;
+}
+
+.ex article {
+    border-top: 1px solid black;
+}
+
+.ex > article:first-of-type, .ex > article:nth-of-type(3) {
+    border-right: 1px solid black;
+}
+.termes_animation {
+    columns: 3;
+}
+
+/* Opacity 0 to 1 */
+
+#opacity div {
+    width: 15vh;
+    height: 15vh;
+    background-color: red;
+    opacity: 0;
+    animation-name:colorChange;
+    animation-duration:3s;
+    animation-delay:2s;
+    animation-fill-mode:forwards;
+}
+@keyframes colorChange{
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* Transform: translate */
+#transform-translate div {
+    width: 15vh;
+    height: 15vh;
+    background: linear-gradient(red, blue);
+    border-radius: 50%;
+    animation-name:moveRight;
+    animation-duration:3s;
+    animation-delay:2s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes moveRight{
+    0% {
+        transform:translateX(0);
+    }
+    100% {
+        transform:translateX(15vh);
+    }
+}
+ /*Translate / Rotate */
+#translate-rotate div {
+    width: 15vh;
+    height: 15vh;
+    background: linear-gradient(red, blue);
+    border-radius: 50%;
+    animation-name:rolledRight;
+    animation-duration:3s;
+    animation-delay:2s;
+    animation-fill-mode:forwards;
+}
+@keyframes rolledRight{
+    0% {
+        transform:translateX(0) rotate(0deg);
+    }
+    100% {
+        transform:translateX(15vh) rotate(180deg) ;
+    }
+}
+
+/* Bounce */
+#bounce div {
+    width: 15vh;
+    height: 15vh;
+    background: linear-gradient(red, blue);
+    border-radius: 50%;
+    animation-name:Bounce;
+    animation-duration:4s;
+    animation-delay:2s;
+    animation-fill-mode:forwards;    
+}
+@keyframes Bounce{
+    0% {
+        transform:translate(0) rotate(0deg);
+    }
+    25% {
+        transform:translate(10vh,15vh) rotate(45deg) ;
+    }
+    50%{
+        transform:translate(18vh,8vh) rotate(90deg) ;
+    }
+    75%{
+        transform:translate(24vh,15vh) rotate(135deg) ;
+    }
+    100%{
+        transform:translate(28vh,15vh) rotate(180deg) ;
+    }
+}
+/* EXPLICATION */ 
+footer{
+    padding:1em;
+    max-width:45vw;
+}

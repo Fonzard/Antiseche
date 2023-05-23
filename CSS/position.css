@@ -1,0 +1,54 @@
+* {
+    box-sizing:border-box;
+}
+main {
+    margin:2em;
+}
+.sticky {
+    background-color: #f9c;
+    position:sticky;
+    top:0;
+    z-index:1;
+    width:40%;
+}
+.static {
+    background-color: #9c6;
+    position:static;
+}
+.relative {
+    background-color: #fc3;
+    position:relative;
+    z-index:3;
+}
+.fixed {
+    background-color: #69c;
+    position:fixed;
+    z-index:2;
+    top:0;
+    right:0;
+    width:20%;
+}
+.absolute {
+    background-color: #f93;
+    position:absolute;
+    padding:2em;
+    top:0;
+    right:0;
+    font-weight:bold;
+    color:#efece5;
+}
+.absolute-relative {
+    position:relative;
+    z-index:2;
+}
+.left {
+    right:5em;
+}
+.fixed pre {
+    width:90%
+}
+/* Fix du menu uniquement pour cette page */
+.menubtn {
+    z-index:5;
+    bottom:20%;
+}

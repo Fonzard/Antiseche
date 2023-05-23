@@ -1,0 +1,57 @@
+/* *****************************************************************
+GENERALITIES
+***************************************************************** */
+body {
+    background-color:#326e43;
+    margin:0;
+    padding:0;
+}
+h2 {
+    color:#efece5;
+}
+a {
+    color:black;
+}
+/* *****************************************************************
+MAIN LAYOUT
+***************************************************************** */
+.homepage {
+    height:auto;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    text-align:center;
+}
+[class*="notion"] {
+    border:10px solid #E15443;
+    font-size:2em;
+    background-color:#efece5;
+    width:10vw;
+}  
+.notion1 { 
+    grid-area: 2 / 2 / 3 / 4; 
+}
+.notion2 { 
+    grid-area: 3 / 8 / 4 / 10; 
+    width:12vw;
+}
+.notion3 { 
+    grid-area: 4 / 4 / 5 / 6; 
+    width:12vw; 
+}
+.notion4 { 
+    grid-area: 6 / 7 / 7 / 9; 
+}
+
+.notion5 { 
+    grid-area: 8 / 3 / 9 / 5; 
+}
+.notion6 { 
+    grid-area: 9 / 5 / 10 / 7;
+    width:18vw; 
+}
+header h2 { 
+    padding:1em;
+    width:10vw;
+}
+
